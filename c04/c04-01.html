@@ -1,0 +1,19 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>获取对象宽度</title>
+    <script type="text/javascript" src="scripts/jquery-1.3.2-vsdoc2.js"></script>
+    <script type="text/javascript">
+        $(function()
+        {
+            alert("attr(\"width\"):" + $("#testDiv").attr("width")); //undifined
+            alert("css(\"width\"):" + $("#testDiv").css("width")); //auto(ie6) 或 1264px(ff)
+            alert("width():" + $("#testDiv").width()); //正确的数值1264
+            alert("style.width:" +  $("#testDiv")[0].style.width ); //空值
+        })
+    </script>
+</head>
+<body>
+    <div id="testDiv">测试文本</div>
+</body>
+</html>
